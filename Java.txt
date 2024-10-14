@@ -1,0 +1,13 @@
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const mobile = document.getElementById('mobile').value;
+    const aadhaar = document.getElementById('aadhaar').value;
+
+    if (name === "" || mobile.length !== 10 || aadhaar.length !== 12) {
+        alert("Please enter valid details.");
+    } else {
+        alert("Login Successful! Name: " + name + ", Mobile: " + mobile + ", Aadhaar: " + aadhaar);
+    }
+});
